@@ -1,0 +1,7 @@
+# Auto generated files with errors to ignore.
+# Remove from this list as you refactor files.
+---
+ignore:
+- config/environments/production.rb
+- config/initializers/devise.rb
+- config/puma.rb
