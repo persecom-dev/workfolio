@@ -1,0 +1,21 @@
+name: SCSS Critic
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+      - run: bundle install
+      - name: scss-lint
+        run: scss-lint app/assets/stylesheets/
