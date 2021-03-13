@@ -12,7 +12,7 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get new" do
     get new_blog_url
-    assert_response :success
+    assert_redirected_to user_session_path
   end
 
   test "should create blog" do
@@ -30,7 +30,7 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get edit" do
     get edit_blog_url(@blog)
-    assert_response :success
+    assert_redirected_to user_session_path
   end
 
   test "should update blog" do
