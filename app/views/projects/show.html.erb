@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @project.published_at %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @project.content %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %> |
+<%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>

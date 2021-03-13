@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blogs</h1>
+<div class="container">
+  <% @blogs.each do |blog| %>
+    <%= link_to blog.title, blog, class: "h1 text-decoration-bone" %>
+    <div>Published at:</div>
+    <%= blog.published_at %>
+    <div>Content:</div>
+    <%= blog.content %>
+    <div><%= link_to "View", blog %></div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>

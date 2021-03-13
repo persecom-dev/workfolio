@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   get "welcome/index"
   get "about/index"
 
+  resources :blogs
+  resources :projects
   resources :activities
 end

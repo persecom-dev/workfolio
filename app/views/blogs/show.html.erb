@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @blog.published_at %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.content %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+<%= link_to 'Delete', @blog, method: :delete, data: { confirm: 'Are you sure?' } %>
