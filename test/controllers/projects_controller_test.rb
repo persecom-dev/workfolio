@@ -12,7 +12,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get new" do
     get new_project_url
-    assert_response :success
+    assert_redirected_to user_session_path
   end
 
   test "should create project" do
@@ -30,7 +30,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get edit" do
     get edit_project_url(@project)
-    assert_response :success
+    assert_redirected_to user_session_path
   end
 
   test "should update project" do
