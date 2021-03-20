@@ -24,12 +24,11 @@ gem "jbuilder", "~> 2.7"
 
 gem "devise"
 
-gem "scss_lint", require: false
-
-gem "standard", group: [:development, :test]
-
 # Use Active Storage variant
 gem "image_processing", "~> 1.2"
+
+# Active Storage Validation
+gem "active_storage_validations"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
@@ -37,6 +36,11 @@ gem "bootsnap", ">= 1.4.4", require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+   # Code critics
+  gem "scss_lint", "~> 0.50", require: false
+  gem "brakeman", ">= 4.0", require: false
+  gem "benchmark-ips", require: false
+  gem "standard"
 end
 
 group :development do
@@ -51,6 +55,7 @@ group :development do
 end
 
 group :test do
+  gem "shoulda", "~> 4.0"
   # Adds support for Capybara system testing and selenium driver
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
