@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<% if @activities.any? %>
 <div class="h1 text-primary">Activities</div>
 <div class="container">
   <% @activities.each do |activity| %>
@@ -7,7 +6,7 @@
     <div><%= link_to "View", activity %></div>
   <% end %>
 </div>
-
+<% end %>
 <br>
 
 <% if user_signed_in? %>
