@@ -280,6 +280,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_storage_validations
+  aws-sdk-s3
+  benchmark-ips
   bootsnap (>= 1.4.4)
   brakeman (>= 4.0)
   byebug
